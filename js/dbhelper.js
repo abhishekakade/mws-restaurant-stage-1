@@ -13,7 +13,7 @@ class DBHelper {
 
     if(isHosted){
     	console.log(window.location.hostname);
-    	return `https://abhishekakade.github.io/mws-restaurant-review-app-stage-1/data/restaurants.json`
+      return `https://abhishekakade.github.io/mws-restaurant-stage-1/data/restaurants.json`;
     }
 
     return `http://localhost:${port}/data/restaurants.json`;
