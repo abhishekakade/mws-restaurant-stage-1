@@ -2,8 +2,6 @@
  * Common database helper functions.
  */
 
-let isHosted = (window.location.hostname === "abhishekakade.github.io") ? 'true' : '' ;
-
 class DBHelper {
 
   /**
@@ -188,3 +186,4 @@ class DBHelper {
 
 }
 
+let isHosted = (window.location.hostname === "abhishekakade.github.io") ? 'true' : '' ;
