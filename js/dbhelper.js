@@ -1,6 +1,9 @@
 /**
  * Common database helper functions.
  */
+
+let isHosted = (window.location.hostname === "abhishekakade.github.io") ? 'true' : '' ;
+
 class DBHelper {
 
   /**
@@ -9,6 +12,12 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
+
+    if(isHosted){
+    	console.log(window.location.hostname);
+    	return `https://abhishekakade.github.io/mws-restaurant-review-app-stage-1/data/restaurants.json`
+    }
+
     return `http://localhost:${port}/data/restaurants.json`;
   }
 
