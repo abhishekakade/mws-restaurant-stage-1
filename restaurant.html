@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -41,16 +41,17 @@
     <div class="container" id="container-2">
 
       <section id="restaurant-container" class="box">
-        <h1 tabindex="3" id="restaurant-name"></h1>
+        <!-- h2 for semantics as h1 is used for app name -->
+        <h2 tabindex="3" id="restaurant-name"></h2>
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
         <p tabindex="4" id="restaurant-address"></p>
-        <table tabindex="5" id="restaurant-hours"></table>
+        <table tabindex="5" id="restaurant-hours" summary="Restaurant Timings"></table>
       </section>
       <!-- end restaurant -->
       <!-- Beginning reviews -->
       <section id="reviews-container" class="box">
-        <ul tabindex="6" id="reviews-list"></ul>
+        <ul id="reviews-list"></ul>
       </section>
       <!-- End reviews -->
     </div>

@@ -225,7 +225,7 @@ select {
   min-width: 100%;
   border-radius: 10px;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   text-align: center;
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -347,11 +347,12 @@ select {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   /* padding: 140px 40px 30px; */
-  padding: 6em 3em 2em;
+  padding: 2em;
   max-width: 50%;
 }
 
 #restaurant-container {
+  padding: 6em 2em 1em;
   text-align: center;
 }
 
@@ -362,7 +363,7 @@ select {
 #reviews-container {
   padding: 2em 2em 8em;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
@@ -375,7 +376,7 @@ select {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 1px solid #333333;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -384,6 +385,13 @@ select {
   position: relative;
   width: auto;
 }
+
+#reviews-list li:focus {
+  outline: none;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px 1px #f18200;
+}
+
 #reviews-list li p {
   margin: 0 0 10px;
   /* font-size: 2em !important; */
@@ -391,6 +399,30 @@ select {
 
 #reviews-list li p:first-of-type {
   font-weight: bold !important;
+  display: inline-block; 
+  background: #f18200;
+  padding: 5px;
+}
+
+#reviews-list li p:nth-child(2) {
+  float: right;
+  font-weight: bold !important;
+  /* display: inline-block;  */
+  background: #f18200;
+  padding: 5px;
+}
+
+#reviews-list li p:nth-child(3) {
+  padding: 5px;
+  font-weight: bold;
+  background: #bada55;
+}
+
+#reviews-list li p:nth-child(4) {
+  padding: 1em;
+  border-right: 2px solid #f18200;
+  border-left: 2px solid #f18200;
+  border-bottom: 2px solid #f18200;
 }
 
 #restaurant-hours td {
@@ -402,7 +434,7 @@ select {
 
 #restaurant-hours {
   padding: 1em;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 
 #restaurant-hours:focus {
