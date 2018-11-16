@@ -161,7 +161,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = `${restaurant.name} Restaurant`; 
+  image.alt = `Photo Extract from ${restaurant.name}'s Restaurant`; 
   li.append(image);
 
   const name = document.createElement('h2');
@@ -176,7 +176,10 @@ createRestaurantHTML = (restaurant) => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
-  const more = document.createElement('a');
+  let more = document.createElement('a');
+  // Added more accessibility settings below 
+  more.setAttribute("role", "link");
+  more.setAttribute("aria-label", `View Details of ${restaurant.name}'s Restaurant`);
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   // To make the 3rd TAB jump to Restaurant Items
